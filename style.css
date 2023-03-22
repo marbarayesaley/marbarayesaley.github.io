@@ -1,0 +1,141 @@
+body
+{
+  width: 100%;
+  width: 100%;
+}
+.imgs
+{
+  height: 20px;
+  width: 60px;
+}
+.image
+{
+  position: relative;
+  left: 800px;
+  top: -250px;
+}
+a
+{
+  text-decoration: none;
+  color: black;
+
+}
+.connecter
+{
+  position: relative;
+  top: 9px;
+  left: 15px;
+  color: beige;
+}
+.lien10
+{
+  position: relative;
+  left: 23px;
+  top: 10px;
+  color: beige;
+}
+.lien11
+{
+  position: relative;
+  top: -230px;
+  left: 50px;
+  background-color: brown;
+  width: 200px;
+  height: 40px;
+  border-radius: 25px;
+}
+.d
+{
+  position: relative;
+  top: -100px;
+  background-color: rgb(233, 214, 190);
+}
+.d1
+{
+  position: relative;
+  left: 1060px;
+  top: -20px;
+  background-color: brown;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+}
+.R
+{
+  background-color: azure;
+  border-radius: 50px;
+}
+.p2
+{
+  position: relative;
+  top: 20px;
+  left: 40px;
+}
+.dernier
+{
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+.box
+{
+  position: relative;
+  left: 80px;
+  top: -20px;
+  word-spacing: 13px;
+}
+.box2
+{
+position: relative;
+left: 820px;
+top: -30px;
+}
+.box3
+{
+  position: relative;
+  left: 970px;
+  top: -60px;
+  background-color: red;
+  width: 115px;
+  height: 40px;
+  border-radius: 20px;
+  
+}
+.box4
+{
+  position: relative;
+  left: 1115px;
+  top: -85px;
+}
+.aa
+{
+  position: relative;
+  top: -80px;
+  font-size: 30px;
+  color: beige;
+  background-color: rgb(29, 29, 56);
+  width: 400px;
+  height: 35px;
+
+}
+.bb
+{
+  position: relative;
+  top: -80px;
+  font-size: 30px;
+  color: beige;
+  background-color: rgb(122, 47, 47);
+  width: 330px;
+  height: 35px;
+}
+.paragraphe
+{
+  position: relative;
+  top: -80px;
+  font-size: 20px;
+}
+  
+  
+  
+  
+  
