@@ -1,74 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
- </head>
- <body>
-  <header>
-    <nav>
-        <div class="lien1">
-          <img class="imgs" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSUk9KbGuqSRfJGgHX3zTI_B56dAuOfZW4YI3FRu4qkwDZUUSoH" alt="logo">
-         <div class="box">
-          <a href="#">Produits</a>
-          <a href="#">Tarifs</a>
-          <a href="#">API</a>
-          <a href="#">Domaines</a>
-          <a href="#">Apropos</a>
-          <a href="#">Contact</a>
-         </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+
+
+    <script>
+        
+        let expCondList = [{"id":"1","dateExpCond":"2024-05-08","heure_depart":"08:00","heure_arrivee":"09:00","kilometrage":"100","idMeteo":"2","idVar2":"3","idVar1":"2"},{"id":"2","dateExpCond":"2024-06-08","heure_depart":"07:00","heure_arrivee":"08:00","kilometrage":"10","idMeteo":"1","idVar2":"3","idVar1":"1"},{"id":"3","dateExpCond":"2024-05-08","heure_depart":"08:00","heure_arrivee":"09:00","kilometrage":"100","idMeteo":"3","idVar2":"3"}]
+        let categoryMeteo = [{"idMeteo":"1", "meteo":"Beau temps", "validMeteo1":"1"},{"idMeteo":"2", "meteo":"Nuageux", "validMeteo1":"1"},{"idMeteo":"3", "meteo":"Pluvieux", "validMeteo1":"1"}]
+        let categoryVar1 = [{"idVar1":"1","nom":"vitesse_moyenne","valeur":"80"},{"idVar1":"2","nom":"type_de_route","valeur":"autoroute"}]
+        let categoryVar2 = [{"idVar2":"3","nom":"incident","valeur":"aucun"}]
+        console.log(expCondList)
+        console.log(categoryMeteo)
+        console.log(categoryVar2)
+        console.log(categoryVar1)
+        </script>
+</head>
+
+<body>
+    
+    <form class="form">
+        
+        <div class="date">
+        <label for="idDate">Date:</label>
+        <input type="date" id="idDate" name="date"><br>
+        </div><br>
+
+        <div class="hD">
+        <label for="heureDepart">Heure de départ:</label>
+        <input type="time" id="heureDepart" name="heure_depart"><br>
+        </div><br>
+        
+        <div class="hA">
+        <label for="heureArrivee">Heure d'arrivée:</label>
+        <input type="time" id="heureArrivee" name="heureArrivee"><br>
+        </div><br>
+        
+        <div class="km">
+        <label for="km">Kilométrage parcouru:</label>
+        <input type="number" id="km" name="kilometrage"><br>
+        </div><br>
+
+        <div class="meteo">
+        <label for="idMeteo">Conditions météo:</label>
+        <select id="idMeteo" name="conditions_meteo" required>
+            <!--<option value="1">Beau temps</option>
+            <option value="2">Nuageux</option>
+            <option value="3">Pluvieux</option>-->
+        </select><br>
+
+        <div class="varVm">
+            <label for="idVar1">Vitesse: </label>
+            <input type="number" id="idVar1" name="vitesse"><br>
         </div>
-        <div class="box1">
-          <div class="box2">
-            <a class="lien2" href="#">Créer un compte</a>
-          </div>
-          <div class="box3">
-            <a class="connecter" href="#">Se connecter</a>
-          </div>
-          <details class="box4">
-            <summary>
-              FR
-            </summary>
-         </details>
+
+        <!--<div class="varRoute">
+            <label for="idVar">Route: </label>
+            <select name="route" id="idVar">
+                <option value="1">autoroute</option>
+                <option value="2">route normal</option>
+            </select>
+        </div>-->
+
+        <div class="incident">
+            <label for="idVar2">Incident:</label>
+            <select name="incident" id="idVar2">
+                <option value="1">Aucun</option>
+            </select>
         </div>
-    </nav>
-  </header>
-  <nav>
-    <div>
-      <h1 class="aa">
-        Réducteur de lien le plus court
-      </h1>
-      <h1 class="bb">
-        Plus d'engagement client
-      </h1>
-    </div>
-    <div>
-      <p class="paragraphe">
-        Depuis 2009,notre plateforme de reduction de liens accompagne les strategies marketing <br>
-        client et aide les marques a batir des relations de proximité et fidélisantes.
-      </p>
-    </div>
-  </nav>
-  <aside>
-    <img class="image" src="logo4.jpeg" alt="">
-    <div class="lien11"><a class="lien10" href="#">Créer un compte gratuit</a></div>
-  </aside>
-  <footer>
-    <div class="d">
-      <div class="R">
-      <p class="p2">
-        Copier-coller l'adresse a minimiser pour générer un lien raccourci à partager à vos communautés
-      </p>
-      <div class="d1">
-        <a class="dernier" href="#">Raccourci</a>
-      </div>
-      </div>
-    </div>
-  </footer>
- </body>
- </html>
+        <script>
+            
+
+            categoryMeteo.forEach(function(item, index){
+                let option = `<option value="${item.idMeteo}">${item.meteo}</option>`;
+                document.getElementById("idMeteo").insertAdjacentHTML(`beforeend`, option);
+    
+            })
+        </script>
+        </div><br>
+
+        <div class="boutton">
+        <button type="button" onclick="save()">SAVE</button>
+        </div>
+    </form>
+    
+    
+    
+</body>
+
+</html>
